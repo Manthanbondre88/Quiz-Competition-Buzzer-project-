@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.display-page {
+  background: black;
+  color: white;
+  padding-top: 100px;
+}
+
+.display-page h1 {
+  font-size: 50px;
+}
+
+#winner {
+  font-size: 70px;
+  font-weight: bold;
+  margin: 100px 20px;
+}
+
+#resetBtn {
+  padding: 20px 50px;
+  font-size: 25px;
+}
+
+#buzzBtn {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #8b0000;
+  background: red;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 15px 0 #700000;
+  transition: 0.1s;
+}
+
+#buzzBtn:active {
+  transform: translateY(12px);
+  box-shadow: 0 3px 0 #700000;
+}
+
+#buzzBtn:disabled {
+  background: gray;
+  border-color: #555;
+  box-shadow: 0 10px 0 #444;
+  cursor: not-allowed;
+}

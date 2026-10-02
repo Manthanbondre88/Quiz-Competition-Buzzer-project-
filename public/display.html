@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Display</title>
+
+    <style>
+
+      *
+      {
+        color:white
+      }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+            background-color: black;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        h1 {
+            margin-top: 25px;
+            font-size: 28px;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .Names
+        {
+          position: absolute;
+          top:10px;
+          left:550px;
+         
+        }
+
+        .display-page
+        {
+          margin-top: 200px;
+        }
+
+        #winner {
+             font-size: 4rem;
+            font-weight: bold;
+             margin-left:10px;
+        }
+
+        #Raisoni
+        {
+          width:10rem;
+          height:8rem;
+        }
+
+        #connectedCount {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#teamStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-status {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+.status-light {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+}
+
+.green {
+    background-color: limegreen;
+    box-shadow: 0 0 15px limegreen;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Logos -->
+    <div class="header">
+        <img src="Msbte.png" alt="MSBTE Logo" class="logo" id="Raisoni">
+
+        <img src="Raisoni.png" alt="Raisoni College Logo" class="logo" id="Raisoni">
+    </div>
+
+    <div class="Names">
+    <!-- Names -->
+    <h1>MAHARASHTRA STATE BOARD OF TECHNICAL EDUCATION</h1>
+    <h1>STATE LEVEL QUIZ COMPETITION</h1>
+
+ 
+
+    <h3>Organized By : -</h3>
+
+    <h2>Department of Computer Engineering</h2>
+
+       <h1>
+        G. H. Raisoni College of Engineering and Management, Nagpur
+    </h1>
+
+    </div>
+
+    <div class="display-page">
+
+  <h1>QUIZ BUZZER</h1>
+
+  <div id="winner">
+    WAITING...
+  </div>
+
+    <div id="connectedCount">
+    0 DEVICES CONNECTED
+</div>
+
+<div id="teamStatus"></div>
+
+  </div>
+
+
+
+
+
+<audio id="buzzerSound" src="Buzzer.mp3" preload="auto"></audio>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="display.js"></script>
+
+  </body>
+</html>
